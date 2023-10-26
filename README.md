@@ -27,6 +27,12 @@
 2. `np.log`
 3. `scipy.special.boxcox1p`
 
+## Plotting
+```[python]
+g = sns.FacetGrid(train_df, col='Survived')
+g.map(plt.hist, 'Age', bins=20)
+```
+
 ## Date Commands
 ```[python]
 start_date = pd.to_datetime("2012-01-01")
@@ -62,9 +68,6 @@ sns.relplot(
 X["MedHouseVal"] = df["MedHouseVal"]
 sns.catplot(x="MedHouseVal", y="Cluster", data=X, kind="boxen", height=6);
 ```
-## NLP Commands
-
-## Geographic Feature Commands
 
 ## Metrics
 * RMSLE -- less sensitive to the scale of values, symmetric (to over/under), and appropriate for data with exponential growth or when percentage errors are meaningful
@@ -79,8 +82,11 @@ sns.catplot(x="MedHouseVal", y="Cluster", data=X, kind="boxen", height=6);
 - Counts are especially helpful for tree models, since these models don't have a natural way of aggregating information across many features at once.
   
 ## Examples
-* (Seasonal ARIMA w/ Cross Validation)[https://www.kaggle.com/code/taufikadi/seasonal-arima-with-cross-validation]
-* 
+* [Seasonal ARIMA w/ Cross Validation](https://www.kaggle.com/code/taufikadi/seasonal-arima-with-cross-validation)
+* [EDA which makes sense](https://www.kaggle.com/code/ambrosm/pss3e23-eda-which-makes-sense)
+* [Survival Analysis w/ Cox Prop Hazards](https://www.kaggle.com/code/bryanb/survival-analysis-with-cox-model-implementation)
+* [NLP Features](https://www.kaggle.com/code/navneetkr123/nlp-feature-engineering-beginners)
+* [Titanic Tutorial](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions)
 
 
 
